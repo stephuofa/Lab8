@@ -59,8 +59,15 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void deleteCity(String cityName){
-
+        for (City c: cities){
+            if (c.getCityName().equalsIgnoreCase(cityName)){
+                cities.remove(c);
+                return;
+            }
+        }
     }
+
+
 
 
 }
